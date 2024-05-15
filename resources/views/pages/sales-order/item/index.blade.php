@@ -55,7 +55,7 @@
                                 </button>
                             </form>
                         @endif
-                        @if ($salesOrder->status == 'WAITING_VALIDATION')
+                        @if ($salesOrder->status == 'WAITING_VALIDATION' && request()->session()->get('user')['role'] === 'SUPERADMIN')
                             <form action="{{ route('sales-order.update', $salesOrder->id) }}" method="POST">
                                 @csrf
                                 @method('PUT')

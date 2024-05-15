@@ -44,21 +44,16 @@
                         <p>History</p>
                     </a>
                 </li>
-                <li class="nav-header font-weight-bold">Setup</li>
-                <li class="nav-item">
-                    <a href="/user" class="nav-link {{ Request::is('user') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p>Users</p>
-                    </a>
-                </li>
-                {{-- @if (request()->session()->get('user')['role'] === 'Superuser')
+                {{-- {{ request()->session()->get('user')['name'] }} --}}
+                @if (request()->session()->get('user')['role'] === 'SUPERADMIN')
+                    <li class="nav-header font-weight-bold">Setup</li>
                     <li class="nav-item">
                         <a href="/user" class="nav-link {{ Request::is('user') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-user"></i>
-                            <p>User</p>
+                            <i class="nav-icon fas fa-users"></i>
+                            <p>Users</p>
                         </a>
                     </li>
-                @endif --}}
+                @endif
             </ul>
         </nav>
     </div>
