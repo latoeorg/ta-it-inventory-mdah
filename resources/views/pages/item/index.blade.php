@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Data Barang</h1>
+                    <h1>Goods</h1>
                 </div>
             </div>
         </div>
@@ -19,7 +19,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#formCreate"><i
+                            <a type="button" class="btn bg-navy" data-toggle="modal" data-target="#formCreate"><i
                                     class="fa fa-plus"></i> Tambah</a>
                             @include('pages.item.create')
                             <table id="defaultTable" class="table table-bordered table-striped">
@@ -51,7 +51,7 @@
                                             <td class="rupiah-format text-right">{{ $item->price_sell }}</td>
                                             <td>{{ $item->stock }}</td>
                                             <td class="text-right">
-                                                <a href="{{ route('item.show', $item->id) }}" class="btn btn-primary">
+                                                <a href="{{ route('item.show', $item->id) }}" class="btn bg-navy">
                                                     <i class="fa fa-eye"></i> History
                                                 </a>
 

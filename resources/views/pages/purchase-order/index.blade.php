@@ -18,7 +18,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#formCreate"><i
+                            <a type="button" class="btn bg-navy" data-toggle="modal" data-target="#formCreate"><i
                                     class="fa fa-plus"></i> Tambah</a>
                             @include('pages.purchase-order.create')
 
@@ -49,8 +49,7 @@
                                             </td>
                                             <td class="rupiah-format text-right">{{ $item->total_amount }}</td>
                                             <td>
-                                                <a href="{{ route('purchase-order.show', $item->id) }}"
-                                                    class="btn btn-primary">
+                                                <a href="{{ route('purchase-order.show', $item->id) }}" class="btn bg-navy">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
 

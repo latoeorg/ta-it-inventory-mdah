@@ -43,7 +43,7 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">
                         Close
                     </button>
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn bg-navy">
                         Submit
                     </button>
                 </div>

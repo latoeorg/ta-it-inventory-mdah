@@ -81,7 +81,7 @@
                     <div class="card">
                         <div class="card-body">
                             @if ($salesOrder->status == 'DRAFT')
-                                <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#formCreate"><i
+                                <a type="button" class="btn bg-navy" data-toggle="modal" data-target="#formCreate"><i
                                         class="fa fa-plus"></i> Add Item</a>
                                 @include('pages.sales-order.item.create')
                             @endif

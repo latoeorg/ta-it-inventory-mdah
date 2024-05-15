@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary ">
+<aside class="main-sidebar sidebar-light-navy border-right">
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
         {{-- <img src="{{ url('/logo.png') }}" alt="Logo" class="brand-image" /> --}}
