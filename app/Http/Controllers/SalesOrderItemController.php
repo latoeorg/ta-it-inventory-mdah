@@ -31,13 +31,14 @@ class SalesOrderItemController extends Controller
 
         // update total amount in purchase order
         $salesOrderItems = SalesOrderItem::where('sales_order_id', $request->sales_order_id)->get();
-        $totalAmount = 0;
+        $total = 0;
         foreach ($salesOrderItems as $item) {
-            $totalAmount += $item->total;
+            $total += $item->total;
         }
 
         $salesOrder = SalesOrder::find($request->sales_order_id);
-        $salesOrder->total_amount = $totalAmount;
+        $salesOrder->subtotal = $total;
+        $salesOrder->total_amount = $total + $salesOrder->additional_fee;
         $salesOrder->save();
 
         return redirect()
@@ -64,13 +65,14 @@ class SalesOrderItemController extends Controller
 
         // update total amount in purchase order
         $salesOrderItems = SalesOrderItem::where('sales_order_id', $salesOrderItem->sales_order_id)->get();
-        $totalAmount = 0;
+        $total = 0;
         foreach ($salesOrderItems as $item) {
-            $totalAmount += $item->total;
+            $total += $item->total;
         }
 
         $salesOrder = SalesOrder::find($salesOrderItem->sales_order_id);
-        $salesOrder->total_amount = $totalAmount;
+        $salesOrder->subtotal = $total;
+        $salesOrder->total_amount = $total + $salesOrder->additional_fee;
         $salesOrder->save();
 
         return redirect()
@@ -88,13 +90,14 @@ class SalesOrderItemController extends Controller
 
         // update total amount in purchase order
         $salesOrderItems = SalesOrderItem::where('sales_order_id', $salesOrderItem->sales_order_id)->get();
-        $totalAmount = 0;
+        $total = 0;
         foreach ($salesOrderItems as $item) {
-            $totalAmount += $item->total;
+            $total += $item->total;
         }
 
         $salesOrder = SalesOrder::find($salesOrderItem->sales_order_id);
-        $salesOrder->total_amount = $totalAmount;
+        $salesOrder->subtotal = $total;
+        $salesOrder->total_amount = $total + $salesOrder->additional_fee;
         $salesOrder->save();
 
         return redirect()

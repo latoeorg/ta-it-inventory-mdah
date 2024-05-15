@@ -25,6 +25,8 @@
                                         <th>Date</th>
                                         <th>Customer</th>
                                         <th>Status</th>
+                                        <th class="text-right">Additional Fee</th>
+                                        <th class="text-right">Subtotal</th>
                                         <th class="text-right">Total Amount</th>
                                         <th>Action</th>
                                     </tr>
@@ -43,6 +45,8 @@
                                             <td>
                                                 @include('includes.badge', ['status' => $item->status])
                                             </td>
+                                            <td class="rupiah-format text-right">{{ $item->additional_fee }}</td>
+                                            <td class="rupiah-format text-right">{{ $item->subtotal }}</td>
                                             <td class="rupiah-format text-right">{{ $item->total_amount }}</td>
                                             <td>
                                                 <a href="{{ route('invoice.show', $item->id) }}" class="btn btn-primary">

@@ -29,6 +29,7 @@ class SalesOrderController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        $data['total_amount'] = $data['additional_fee'];
 
         $result = SalesOrder::create($data);
 
@@ -58,6 +59,11 @@ class SalesOrderController extends Controller
     public function update(Request $request, $id)
     {
         $salesOrder = SalesOrder::find($id);
+
+        if ($request->additional_fee) {
+            $total = $salesOrder->subtotal + $request->additional_fee;
+            $request->merge(['total_amount' => $total]);
+        }
 
         if ($request->status == 'DONE') {
             $salesOrderItems = SalesOrderItem::where('sales_order_id', $id)->get();

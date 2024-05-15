@@ -8,26 +8,59 @@
                         Sales Order #00{{ $salesOrder->id }}
                     </h1>
 
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <table>
+                                <tr>
+                                    <td class="text-muted">Status</td>
+                                    <td class="px-2">:</td>
+                                    <td>@include('includes.badge', ['status' => $salesOrder->status])</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">Date</td>
+                                    <td class="px-2">:</td>
+                                    <td>{{ $salesOrder->date }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">Target Date</td>
+                                    <td class="px-2">:</td>
+                                    <td>{{ $salesOrder->target_date }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">Customer</td>
+                                    <td class="px-2">:</td>
+                                    <td>{{ $salesOrder->customer }}</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <table>
+
+                                <tr>
+                                    <td class="text-muted">Additional Price</td>
+                                    <td class="px-2">:</td>
+                                    <td class="rupiah-format">{{ $salesOrder->additional_fee }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">Subtotal</td>
+                                    <td class="px-2">:</td>
+                                    <td class="rupiah-format">{{ $salesOrder->subtotal }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">Total Amount</td>
+                                    <td class="px-2">:</td>
+                                    <td class="rupiah-format">{{ $salesOrder->total_amount }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
                     <table>
                         <tr>
-                            <td>Status</td>
+                            <td class="text-muted">Note</td>
                             <td class="px-2">:</td>
-                            <td>@include('includes.badge', ['status' => $salesOrder->status])</td>
-                        </tr>
-                        <tr>
-                            <td>Date</td>
-                            <td class="px-2">:</td>
-                            <td>{{ $salesOrder->date }}</td>
-                        </tr>
-                        <tr>
-                            <td>Customer</td>
-                            <td class="px-2">:</td>
-                            <td>{{ $salesOrder->customer }}</td>
-                        </tr>
-                        <tr>
-                            <td>Total Amount</td>
-                            <td class="px-2">:</td>
-                            <td class="rupiah-format">{{ $salesOrder->total_amount }}</td>
+                            <td>{{ $salesOrder->note }}</td>
                         </tr>
                     </table>
                 </div>

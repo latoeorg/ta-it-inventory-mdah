@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row my-3">
     <div class="col-12">
         <h4>
             {{-- <i class="fas fa-globe"></i> AdminLTE, Inc. --}}
@@ -26,14 +26,14 @@
             <strong>IT Inventory, Inc.</strong><br>
             Indonesia, Batam<br>
             Phone: (804) 123-5432<br>
-            Email: info@almasaeedstudio.com
+            Email: admin@itinventory.com
         </address>
     </div>
 
     <div class="col-sm-4 invoice-col">
         To
         <address>
-            <strong>John Doe</strong><br>
+            <strong>{{ $salesOrder->customer }}</strong><br>
         </address>
     </div>
 
@@ -79,8 +79,7 @@
 
     <div class="col-6">
         <p class="lead mb-1">Note:</p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam voluptate dicta harum
-        ab, sunt fuga architecto consequuntur
+        Transfer to BCA 123456789 a/n IT Inventory, Inc.
         </p>
     </div>
 
@@ -90,11 +89,11 @@
                 <tbody>
                     <tr>
                         <th style="width:50%">Subtotal:</th>
-                        <td class="rupiah-format">{{ $salesOrder->total_amount }}</td>
+                        <td class="rupiah-format">{{ $salesOrder->subtotal }}</td>
                     </tr>
                     <tr>
-                        <th>Shipping:</th>
-                        <td class="rupiah-format">0</td>
+                        <th>Additional Fee:</th>
+                        <td class="rupiah-format">{{ $salesOrder->additional_fee }}</td>
                     </tr>
                     <tr>
                         <th>Total:</th>

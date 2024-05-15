@@ -13,7 +13,11 @@ return new class extends Migration {
         Schema::create('sales_orders', function (Blueprint $table) {
             $table->id();
             $table->date('date')->default(now());
+            $table->date('target_date');
             $table->string('customer')->nullable();
+            $table->integer('additional_fee')->default(0);
+            $table->string('note')->nullable();
+            $table->integer('subtotal')->default(0);
             $table->integer('total_amount')->default(0);
             $table->string('status')->default('DRAFT');
             $table->timestamps();

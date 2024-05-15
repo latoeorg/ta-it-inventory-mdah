@@ -14,7 +14,7 @@ class SalesOrder extends Model
      *
      * @var array<int, string>
      */
-    protected $fillable = ['date', 'customer', 'total_amount', 'status'];
+    protected $fillable = ['date', 'target_date', 'customer', 'additional_fee', 'note', 'subtotal', 'total_amount', 'status'];
 
     public function items()
     {
