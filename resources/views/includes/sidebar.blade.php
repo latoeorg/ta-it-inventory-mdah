@@ -21,7 +21,7 @@
                 <li class="nav-item">
                     <a href="/item" class="nav-link {{ Request::is('item') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-box"></i>
-                        <p>Barang</p>
+                        <p>Goods</p>
                     </a>
                 </li>
                 <li class="nav-header font-weight-bold">Main</li>
@@ -40,7 +40,7 @@
                 <li class="nav-item">
                     <a href="/history" class="nav-link {{ Request::is('history') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-history"></i>
-                        <p>Riwayat</p>
+                        <p>History</p>
                     </a>
                 </li>
                 <li class="nav-header font-weight-bold">Setup</li>

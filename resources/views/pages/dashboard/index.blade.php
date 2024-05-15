@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Selamat Datang {{ request()->session()->get('user')['name'] }} </h1>
+                    <h1 class="m-0">Welcome {{ request()->session()->get('user')['name'] }} </h1>
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="mb-4">
-                        <p class="text-muted mb-0">Pendapatan</p>
+                        <p class="text-muted mb-0">Income</p>
                         <h2 class="rupiah-format mb-1" style="font-weight: 600">{{ $totalProfit }}</h1>
                             <p class="mb-0" style="font-weight: 600">
                                 <span class="text-danger">PO - <span
@@ -37,8 +37,7 @@
                                     <p class="mb-0">Purchase Order</p>
 
                                     <p class="">
-                                        {{-- There's <b>{{ $totalPurchaseOrderNotDone }}</b> finished purchase order --}}
-                                        Total <b>{{ $totalPurchaseOrderNotDone }}</b> PO yang belum selesai
+                                        There's <b>{{ $totalPurchaseOrderNotDone }}</b> not finished purchase order
                                     </p>
                                 </div>
                                 <div class="icon">
@@ -55,8 +54,7 @@
                                     <p class="mb-0">Sales Order</p>
 
                                     <p class="">
-                                        {{-- There's <b>{{ $totalSalesOrderNotDone }}</b> finished purchase order --}}
-                                        Total <b>{{ $totalSalesOrderNotDone }}</b> SO yang belum selesai
+                                        There's <b>{{ $totalSalesOrderNotDone }}</b> not finished purchase order
 
                                     </p>
                                 </div>
@@ -73,18 +71,12 @@
                                     <span class="info-box-text mb-0">Goods</span>
                                     <span class="info-box-number" style="font-size: 1.9rem; line-height: 1.9rem">
                                         {{ $totalItem }}
-                                        {{-- {{ $totalStock }} --}}
                                     </span>
 
-                                    {{-- <div class="progress">
-                                            <div class="progress-bar" style="width: 70%"></div>
-                                        </div> --}}
                                     <span class="progress-description">
-                                        {{-- There are <b>{{ $totalStock }}</b> goods in the warehouse <br> --}}
-                                        Total <b>{{ $totalStock }}</b> stock barang di gudang <br>
-                                        {{-- There are <b>{{ $totalLowStock }}</b> goods that are running low in the
-                                        warehouse --}}
-                                        Ada <b>{{ $totalLowStock }}</b> barang yang tidak ada di gudang
+                                        There are <b>{{ $totalStock }}</b> good stocks in the warehouse <br>
+                                        There are <b>{{ $totalLowStock }}</b> goods that are running low in the
+                                        warehouse
                                     </span>
                                 </div>
                                 <!-- /.info-box-content -->
@@ -106,9 +98,9 @@
                                         <th>No</th>
                                         <th>Date</th>
                                         <th>Type</th>
-                                        <th>Quantity Sebelum</th>
+                                        <th>Quantity Before</th>
                                         <th>Quantity</th>
-                                        <th>Quantity Sesudah</th>
+                                        <th>Quantity After</th>
                                     </tr>
                                 </thead>
                                 <tbody>
