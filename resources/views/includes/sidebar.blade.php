@@ -39,6 +39,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="/invoice" class="nav-link {{ Request::is('invoice') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-file-alt"></i>
+                        <p>Invoice</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="/history" class="nav-link {{ Request::is('history') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-history"></i>
                         <p>History</p>
