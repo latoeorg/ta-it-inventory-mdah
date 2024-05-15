@@ -34,4 +34,16 @@ class InvoiceController extends Controller
             'salesOrder' => $salesOrder,
         ]);
     }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function print($id)
+    {
+        $salesOrder = SalesOrder::where('id', $id)->first();
+
+        return view('pages.invoice.print', [
+            'salesOrder' => $salesOrder,
+        ]);
+    }
 }

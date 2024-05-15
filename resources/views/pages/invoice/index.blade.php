@@ -46,6 +46,10 @@
                                             <td class="rupiah-format text-right">{{ $item->total_amount }}</td>
                                             <td>
                                                 <a href="{{ route('invoice.show', $item->id) }}" class="btn btn-primary">
+                                                    <i class="fa fa-eye"></i>
+                                                </a>
+                                                <a href="/invoice/print/{{ $item->id }}" class="btn btn-info"
+                                                    target="_blank">
                                                     <i class="fa fa-print"></i>
                                                 </a>
                                             </td>

@@ -31,6 +31,7 @@ Route::resource('/purchase-order', PurchaseOrderController::class)->middleware('
 Route::resource('/purchase-order-item', PurchaseOrderItemController::class)->middleware('auth');
 Route::resource('/sales-order', SalesOrderController::class)->middleware('auth');
 Route::resource('/sales-order-item', SalesOrderItemController::class)->middleware('auth');
+Route::get('/invoice/print/{id}', [InvoiceController::class, 'print'])->middleware('auth');
 Route::resource('/invoice', InvoiceController::class)->middleware('auth');
 Route::resource('/history', HistoryController::class)->middleware('auth');
 
