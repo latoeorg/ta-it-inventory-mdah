@@ -35,7 +35,7 @@
                     <div class="row justify-content-end">
                         <!-- /.col -->
                         <div class="col-12">
-                            <button type="submit" class="btn bg-navy btn-block">Masuk</button>
+                            <button type="submit" class="btn btn-primary btn-block">Masuk</button>
                         </div>
                         <!-- /.col -->
                     </div>

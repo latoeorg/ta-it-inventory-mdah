@@ -1,6 +1,7 @@
 <footer class="main-footer">
     <strong>Copyright &copy; 2024 -
-        L Azlan Rafar</strong>
+        Maytree Della Anasthasyah Harianjah
+    </strong>
     All rights reserved.
 </footer>
 
