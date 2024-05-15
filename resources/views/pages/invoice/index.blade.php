@@ -34,7 +34,7 @@
                                     @foreach ($items as $item)
                                         <tr>
                                             <td>
-                                                <a href="{{ route('sales-order.show', $item->id) }}">
+                                                <a href="{{ route('invoice.show', $item->id) }}">
                                                     #00{{ $item->id }}
                                                 </a>
                                             </td>
@@ -45,8 +45,7 @@
                                             </td>
                                             <td class="rupiah-format text-right">{{ $item->total_amount }}</td>
                                             <td>
-                                                <a href="{{ route('sales-order.show', $item->id) }}"
-                                                    class="btn btn-primary">
+                                                <a href="{{ route('invoice.show', $item->id) }}" class="btn btn-primary">
                                                     <i class="fa fa-print"></i>
                                                 </a>
                                             </td>

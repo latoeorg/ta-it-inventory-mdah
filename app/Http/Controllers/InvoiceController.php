@@ -28,10 +28,10 @@ class InvoiceController extends Controller
      */
     public function show($id)
     {
-        $item = SalesOrder::where('id', $id)->get();
+        $salesOrder = SalesOrder::where('id', $id)->first();
 
-        return view('pages.invoice.index', [
-            'item' => $item,
+        return view('pages.invoice.detail', [
+            'salesOrder' => $salesOrder,
         ]);
     }
 }

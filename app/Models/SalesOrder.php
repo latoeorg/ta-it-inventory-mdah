@@ -15,4 +15,9 @@ class SalesOrder extends Model
      * @var array<int, string>
      */
     protected $fillable = ['date', 'customer', 'total_amount', 'status'];
+
+    public function items()
+    {
+        return $this->hasMany(SalesOrderItem::class);
+    }
 }

@@ -3,12 +3,12 @@
     aria-labelledby="formUpdate{{ $item->id }}Label" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form action="{{ route('user.update', $item->id) }}" method="POST">
+            <form action="{{ route('item.update', $item->id) }}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="modal-header">
                     <h5 class="modal-title" id="formUpdate{{ $item->id }}Label">
-                        Update User
+                        Update Item
                     </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>

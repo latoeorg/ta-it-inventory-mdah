@@ -50,4 +50,17 @@ class ItemController extends Controller
 
         return redirect()->route('item.index')->with('success', 'Successfully added item');
     }
+
+    /**
+     * Update a newly created resource in storage.
+     */
+    public function update(Request $request, $id)
+    {
+        $data = $request->all();
+
+        $item = Item::find($id);
+        $item->update($data);
+
+        return redirect()->route('item.index')->with('success', 'Successfully edit item');
+    }
 }
