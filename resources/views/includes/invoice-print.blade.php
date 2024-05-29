@@ -3,12 +3,17 @@
         <h4>
             {{-- <i class="fas fa-globe"></i> AdminLTE, Inc. --}}
             <div>
-                <img src="{{ asset('logo.svg') }}" alt="Logo" width="30" class="brand-image float-left"
+                <img src="{{ asset('logo.png') }}" alt="Logo" width="50" class="brand-image float-left"
                     style="opacity: .8" />
 
-                <p class="fw-medium float-left ml-2">
-                    IT INVENTORY
-                </p>
+                <div class="float-left ml-2">
+                    <p class="fw-medium mb-0">
+                        PT. Metal Supplindo
+                    </p>
+                    <p class="text-sm text-muted">
+                        Stainless Steel Works & General Supplier
+                    </p>
+                </div>
             </div>
 
             <small class="float-right">Date:
@@ -23,10 +28,10 @@
     <div class="col-sm-4 invoice-col">
         From
         <address>
-            <strong>IT Inventory, Inc.</strong><br>
+            <strong>PT. Metal Supplindo.</strong><br>
             Indonesia, Batam<br>
-            Phone: (804) 123-5432<br>
-            Email: admin@itinventory.com
+            Phone: 0851-0695-8889<br>
+            Email: metalsupplindo@yahoo.com
         </address>
     </div>
 
@@ -79,7 +84,7 @@
 
     <div class="col-6">
         <p class="lead mb-1">Note:</p>
-        Transfer to BCA 123456789 a/n IT Inventory, Inc.
+        Transfer to BCA 123456789 a/n PT. Metal Supplindo, Inc.
         </p>
     </div>
 
