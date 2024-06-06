@@ -56,7 +56,7 @@
                                                 </a>
 
                                                 <form id="formDelete{{ $item->id }}"
-                                                    action="{{ route('user.destroy', $item->id) }}" method="POST"
+                                                    action="{{ route('item.destroy', $item->id) }}" method="POST"
                                                     class="d-inline">
                                                     @csrf
                                                     @method('delete')
