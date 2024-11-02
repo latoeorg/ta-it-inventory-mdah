@@ -29,6 +29,7 @@ class PurchaseOrderController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        $data['creator_id'] = auth()->user()->id;
 
         $result = PurchaseOrder::create($data);
 
@@ -73,6 +74,7 @@ class PurchaseOrderController extends Controller
                     'quantity_after' => $item->stock + $i->quantity,
                     'description' => 'Added from Purchase Order #00' . $id,
                     'type' => 'PURCHASE ORDER',
+                    'creator_id' => auth()->user()->id,
                 ]);
 
                 $item->stock += $i->quantity;

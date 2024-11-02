@@ -28,6 +28,7 @@
                                         <th>Quantity Before</th>
                                         <th>Quantity</th>
                                         <th>Quantity After</th>
+                                        <th>Creator</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -40,6 +41,7 @@
                                             <td>{{ $item->quantity_before }}</td>
                                             <td>{{ $item->quantity }}</td>
                                             <td>{{ $item->quantity_after }}</td>
+                                            <td>{{ $item->creator->name }}</td>
                                         </tr>
                                         <?php $i++; ?>
                                     @endforeach

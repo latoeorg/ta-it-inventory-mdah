@@ -30,6 +30,7 @@ class SalesOrderController extends Controller
     {
         $data = $request->all();
         $data['total_amount'] = $data['additional_fee'];
+        $data['creator_id'] = auth()->user()->id;
 
         $result = SalesOrder::create($data);
 
@@ -83,6 +84,7 @@ class SalesOrderController extends Controller
                     'quantity_after' => $item->stock - $i->quantity,
                     'description' => 'Remove from Sales Order #00' . $id,
                     'type' => 'SALES ORDER',
+                    'creator_id' => auth()->user()->id,
                 ]);
 
                 $item->stock -= $i->quantity;

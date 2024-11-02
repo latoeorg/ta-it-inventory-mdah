@@ -20,6 +20,7 @@ return new class extends Migration {
             $table->integer('subtotal')->default(0);
             $table->integer('total_amount')->default(0);
             $table->string('status')->default('DRAFT');
+            $table->foreignId('creator_id')->constrained('users');
             $table->timestamps();
         });
     }

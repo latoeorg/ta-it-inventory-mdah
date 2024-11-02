@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->integer('quantity');
             $table->integer('quantity_after');
             $table->string('description')->nullable();
+            $table->foreignId('creator_id')->constrained('users');
             $table->timestamps();
         });
     }

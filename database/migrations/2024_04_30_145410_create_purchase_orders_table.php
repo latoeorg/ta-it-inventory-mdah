@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->string('supplier')->nullable();
             $table->integer('total_amount')->default(0);
             $table->string('status')->default('DRAFT');
+            $table->foreignId('creator_id')->constrained('users');
             $table->timestamps();
         });
     }
